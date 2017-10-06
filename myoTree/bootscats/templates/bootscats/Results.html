@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+{% if player.id_in_group == 1 %}
+    <p>
+        You are Player 1, score: {{ group.p1_score }}. </br>
+        Player 2, score: {{ group.p2_score }}.
+    </p>
+{% else %}
+    <p>
+        You are Player 2, score: {{ group.p2_score }}. </br>
+        Player 1, score: {{ group.p1_score }}.
+    </p>
+
+{% endif %}
+
+{% endblock %}

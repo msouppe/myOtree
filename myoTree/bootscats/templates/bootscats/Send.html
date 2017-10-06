@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Bootscats
+{% endblock %}
+
+{% block content %}
+
+    {% include Constants.instructions_template %}
+
+    <p>
+    You are Player 1
+    </p>
+     
+    <p>
+    Player 2 entered the number: {{ group.p2_num }}
+    </p>
+    
+    {% formfield group.p1_response with label="Enter reponse: " %}
+    
+    {% formfield group.p1_num with label="Enter a number: " %}
+
+    {% next_button %}
+
+{% endblock %}
